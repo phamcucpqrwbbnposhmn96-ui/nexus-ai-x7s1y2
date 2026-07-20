@@ -4,7 +4,7 @@ nexus-ai-x7s1y2（AI 自动生成）
 
 > 本文档由仓库导出流程根据项目实际文件自动生成，覆盖项目概述、环境要求、架构、安装、构建、使用、贡献与维护等全方位说明，力求达到成熟开源项目的文档标准。
 
-![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue) ![platform](https://img.shields.io/badge/platform-Android-orange) ![version](https://img.shields.io/badge/version-1.0.0-informational) ![files](https://img.shields.io/badge/files-12-blueviolet)
+![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue) ![platform](https://img.shields.io/badge/platform-Android-orange) ![version](https://img.shields.io/badge/version-1.0.0-informational) ![files](https://img.shields.io/badge/files-4-blueviolet)
 
 ## 目录
 
@@ -60,7 +60,7 @@ nexus-ai-x7s1y2（AI 自动生成）
 
 ## 项目概述
 
-nexus-ai-x7s1y2 是一个基于 **Java / Maven-Gradle** 构建的 Android 项目，当前仓库共包含 **12** 个文件。项目遵循清晰的分层结构与约定的工程规范，便于二次开发与长期维护。
+nexus-ai-x7s1y2 是一个基于 **TXT** 构建的 Android 项目，当前仓库共包含 **4** 个文件。项目遵循清晰的分层结构与约定的工程规范，便于二次开发与长期维护。
 
 本项目旨在提供一套开箱即用、文档完备、易于扩展的实现。无论你是希望直接复用其中的模块，还是想了解其设计与实现思路，都可以在本仓库中找到对应的说明与示例。文档内容会根据仓库中的真实文件自动生成，确保与代码保持同步。
 
@@ -137,15 +137,11 @@ sudo apt update && sudo apt install -y git curl
 
 | 类别 | 名称 | 说明 |
 | --- | --- | --- |
-| 主要语言 | XML | 项目核心实现语言 |
-| 语言 | XML | 共 3 个文件 |
-| 语言 | GRADLE | 共 3 个文件 |
+| 主要语言 | TXT | 项目核心实现语言 |
 | 语言 | TXT | 共 1 个文件 |
+| 语言 | XML | 共 1 个文件 |
 | 语言 | KT | 共 1 个文件 |
 | 语言 | Markdown | 共 1 个文件 |
-| 语言 | APK | 共 1 个文件 |
-| 语言 | YAML | 共 1 个文件 |
-| 框架/平台 | Java / Maven-Gradle | 提供运行时/构建支持 |
 | 构建 | Gradle | 负责编译与打包 |
 
 ## 架构设计
@@ -182,33 +178,19 @@ sudo apt update && sudo apt install -y git curl
 
 ```
 .
-├── .github/
-│   └── workflows/
-│       └── build.yml
 ├── README.md
-├── app/
-│   ├── build.gradle
-│   └── src/
-│       └── main/
-│           ├── AndroidManifest.xml
-│           └── res/
-│               └── values/
-│                   └── strings.xml
-├── build.gradle
-├── generated.apk
-├── gradlew
-├── nexus-app/
-│   └── src/
-│       └── generated/
-│           └── generated/
-│               └── generated/
-│                   └── generated/
-│                       └── generated/
-│                           ├── AlarmReceiver.kt
-│                           ├── AndroidManifest.xml
-│                           └── generated/
-│                               └── file_1.txt
-└── settings.gradle
+└── nexus-app/
+    └── src/
+        └── generated/
+            └── generated/
+                └── generated/
+                    └── generated/
+                        └── generated/
+                            └── generated/
+                                ├── AlarmReceiver.kt
+                                ├── AndroidManifest.xml
+                                └── generated/
+                                    └── file_1.txt
 +-- README.md
 ```
 
@@ -218,84 +200,28 @@ sudo apt update && sudo apt install -y git curl
 
 | 文件路径 | 类别 | 说明 |
 | --- | --- | --- |
-| `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
 | `README.md` | 源码 | 项目说明文档 |
-| `generated.apk` | 产物 | 项目文件 |
-| `build.gradle` | 配置 | 项目文件 |
-| `settings.gradle` | 配置 | 项目文件 |
-| `app/build.gradle` | 配置 | 项目文件 |
-| `app/src/main/AndroidManifest.xml` | 配置 | 项目文件 |
-| `app/src/main/res/values/strings.xml` | 配置 | 项目文件 |
-| `gradlew` | 源码 | 项目文件 |
-| `.github/workflows/build.yml` | 配置 | 项目文件 |
 
 ## 模块详解
 
 下面按文件逐一说明其作用与关注点，便于快速建立整体认知。
 
-### `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt`
+### `nexus-app/src/generated/generated/generated/generated/generated/generated/generated/file_1.txt`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml`
+### `nexus-app/src/generated/generated/generated/generated/generated/generated/AndroidManifest.xml`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `generated.apk`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的构建产物交付，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `build.gradle`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `settings.gradle`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/build.gradle`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/src/main/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/src/main/res/values/strings.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `gradlew`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `.github/workflows/build.yml`
+### `nexus-app/src/generated/generated/generated/generated/generated/generated/AlarmReceiver.kt`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
@@ -851,16 +777,6 @@ Authorization: Bearer <token>
 ### `nexus-app/`
 
 - 职责：承载与「nexus-app」相关的文件，保持内聚。
-- 维护建议：新增此类文件时统一放入该目录，避免散落。
-
-### `app/`
-
-- 职责：承载与「app」相关的文件，保持内聚。
-- 维护建议：新增此类文件时统一放入该目录，避免散落。
-
-### `.github/`
-
-- 职责：承载与「.github」相关的文件，保持内聚。
 - 维护建议：新增此类文件时统一放入该目录，避免散落。
 
 ## 依赖说明
