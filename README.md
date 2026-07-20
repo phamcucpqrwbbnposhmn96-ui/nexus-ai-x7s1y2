@@ -203,10 +203,11 @@ sudo apt update && sudo apt install -y git curl
 │           └── generated/
 │               └── generated/
 │                   └── generated/
-│                       ├── AlarmReceiver.kt
-│                       ├── AndroidManifest.xml
 │                       └── generated/
-│                           └── file_1.txt
+│                           ├── AlarmReceiver.kt
+│                           ├── AndroidManifest.xml
+│                           └── generated/
+│                               └── file_1.txt
 └── settings.gradle
 +-- README.md
 ```
@@ -217,9 +218,9 @@ sudo apt update && sudo apt install -y git curl
 
 | 文件路径 | 类别 | 说明 |
 | --- | --- | --- |
-| `nexus-app/src/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
 | `README.md` | 源码 | 项目说明文档 |
 | `generated.apk` | 产物 | 项目文件 |
 | `build.gradle` | 配置 | 项目文件 |
@@ -234,19 +235,19 @@ sudo apt update && sudo apt install -y git curl
 
 下面按文件逐一说明其作用与关注点，便于快速建立整体认知。
 
-### `nexus-app/src/generated/generated/generated/generated/generated/file_1.txt`
+### `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/generated/generated/generated/AndroidManifest.xml`
+### `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/generated/generated/generated/AlarmReceiver.kt`
+### `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
